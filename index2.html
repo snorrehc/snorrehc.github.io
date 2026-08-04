@@ -1,0 +1,44 @@
+:root{
+  --content-max-width: 1000px;
+  --body-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --base-size: 16px;
+  --color-text: #111111;
+  --color-link: #0645ad; /* accessible blue */
+  --color-bg: #ffffff;
+  --container-padding: 1rem;
+}
+
+/* Responsive base font: ranges between 16px and 18px */
+html { font-family: var(--body-font); font-size: clamp(16px, 1.1vw + 0.8rem, 18px); background: var(--color-bg); color: var(--color-text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+body { margin: 0; line-height: 1.55; }
+
+.container { width: 95%; max-width: var(--content-max-width); margin: 0 auto; padding: var(--container-padding); }
+
+/* Headings */
+h1 { font-size: clamp(1.6rem, 2.2vw, 2.25rem); margin: 0 0 0.25rem 0; }
+h2 { font-size: clamp(1.1rem, 1.6vw, 1.5rem); margin-top: 1.25rem; }
+
+/* Lead paragraph */
+.lead { margin-top: 0.25rem; color: #333; }
+
+/* Grid layout for sections */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Lists and links */
+ul { margin: 0.25rem 0 0 1rem; padding: 0; }
+a { color: var(--color-link); text-decoration: underline; }
+a:focus-visible { outline: 3px solid highlight; outline-offset: 3px; }
+
+/* Footer */
+.site-footer { font-size: 0.9rem; color: #555; margin-top: 2rem; }
+
+/* Accessibility: ensure contrast and readable line length */
+@media (min-width: 900px) {
+  .container { font-size: 1rem; }
+}
