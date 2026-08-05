@@ -25,7 +25,7 @@ h2 { font-size: clamp(1.1rem, 1.6vw, 1.5rem); margin-top: 1.25rem; }
 /* Grid layout for sections */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   align-items: start;
 }
